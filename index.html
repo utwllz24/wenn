@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 Portfolio Lucu & Aesthetic Pink</title>
+    <!-- Memuat Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Memuat Google Fonts: Pacifico (Lucu/Aesthetic) dan Inter (Body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 1. Konfigurasi Font Kustom */
+        .font-pacifico { font-family: 'Pacifico', cursive; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+
+        /* 2. Definisi Kursor Kustom (Efek Lucu) */
+        /* Menggunakan kursor emoji bintang pink */
+        body {
+            cursor: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+CiAgPHRleHQgeT0iMTQiIGZvbnQtc2l6ZT0iMTYiPuKdpTwvdGV4dD4KPC9zdmc+"), auto;
+            background-color: #fce4ec; /* Background sangat lembut */
+        }
+        
+        /* 3. Animasi Tombol (Efek Lucu/Bouncy) */
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+        }
+        .wiggle:hover {
+            animation: wiggle 0.3s ease-in-out infinite alternate;
+            transform: scale(1.05);
+        }
+
+        /* 4. Konfigurasi Warna Tailwind (The Pink Aesthetic) */
+        /* Custom Pink Palette */
+        :root {
+            --pink-soft: #FADDE1; /* Millennial Pink (Super Soft) */
+            --pink-main: #FF69B4; /* Hot Pink (Main Accent) */
+            --pink-dark: #A03472; /* Deep Pink (Hover/Dark Accent) */
+            --text-dark: #191970; /* Navy Blue for contrast */
+        }
+        
+        .bg-pink-soft { background-color: var(--pink-soft); }
+        .bg-pink-main { background-color: var(--pink-main); }
+        .text-pink-main { color: var(--pink-main); }
+        .text-text-dark { color: var(--text-dark); }
+        .border-pink-main { border-color: var(--pink-main); }
+        .hover\:bg-pink-dark:hover { background-color: var(--pink-dark); }
+    </style>
+
+    <script>
+        // Konfigurasi Tailwind untuk menggunakan warna kustom
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pink-soft': '#FADDE1',
+                        'pink-main': '#FF69B4',
+                        'pink-dark': '#A03472',
+                        'text-dark': '#191970',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-inter text-text-dark antialiased">
+    
+    <!-- Hero Section (Paling Pink dan Lucu) -->
+    <header class="bg-pink-soft p-8 sm:p-16 text-center shadow-lg rounded-b-3xl">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="font-pacifico text-4xl sm:text-6xl text-pink-main mb-4 leading-tight">
+                HALO, SAYA utwlll!
+            </h1>
+            <p class="text-xl sm:text-2xl font-light mb-8 text-text-dark">
+                Seorang [Gelar Anda] yang 100% Lucu, 99% Ahli, dan <span class="text-pink-main font-bold">Selalu Penuh Ide Pink.</span> 🎀
+            </p>
+            
+            <a href="#portfolio" class="inline-block px-8 py-3 text-lg font-bold text-white bg-pink-main rounded-full shadow-xl transition duration-300 transform hover:scale-105 hover:bg-pink-dark wiggle">
+                Lihat Proyek Saya yang Menggemaskan! 👇
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12 sm:py-20">
+        
+        <!-- About Me Section -->
+        <section id="tentang" class="mb-20">
+            <h2 class="font-pacifico text-3xl sm:text-4xl text-center text-pink-main mb-8">
+                Kenalan Lebih Dalam (Psst, Ini Rahasia) 🤫
+            </h2>
+            
+            <div class="max-w-3xl mx-auto bg-white p-6 sm:p-8 rounded-2xl shadow-xl border-4 border-pink-main/50">
+                <div class="text-lg space-y-4">
+                    <p>
+                        Nama saya utwll. Saya seorang [Job Title] yang percaya bahwa *coding* harus seindah dan selembut warna pink. Saya suka mengubah ide yang kaku menjadi *website* yang *smooth* dan penuh kejutan.
+                    </p>
+                    <p class="font-bold text-pink-main">
+                        Fakta Menarik tentang Saya:
+                    </p>
+                    <ul class="list-none space-y-2 pl-0">
+                        <li class="flex items-start">
+                            <span class="mr-2 text-xl text-pink-main">✨</span> Saya tidak tidur, saya *debug* dalam mimpi.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2 text-xl text-pink-main">☕</span> Energi saya 80% kopi, 20% ide jenius (dan *snack* lucu).
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2 text-xl text-pink-main">💾</span> Saya punya koleksi font aesthetic yang terlalu banyak.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dekorasi Pemisah Lucu -->
+        <div class="text-center mb-16 text-4xl text-pink-main">
+            💖 ⋆｡°✩ 💖 ⋆｡°✩ 💖
+        </div>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="mb-20">
+            <h2 class="font-pacifico text-3xl sm:text-4xl text-center text-pink-main mb-12">
+                Karya-Karya yang Saya Ciptakan (Dengan Banyak *Sparkle*) ✨
+            </h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Proyek 1 -->
+                <div class="bg-white p-5 rounded-xl shadow-lg border-4 border-pink-main/70 transform hover:scale-[1.02] transition duration-300">
+                    <div class="bg-pink-soft h-32 rounded-lg mb-4 flex items-center justify-center text-pink-main font-bold text-xl">
+                        [Screenshot Mockup]
+                    </div>
+                    <h3 class="font-bold text-xl text-text-dark mb-2">Website yang Hampir Membuat Saya Menangis</h3>
+                    <p class="text-sm">
+                        Proyek e-commerce dengan animasi CSS yang gila. Dikerjakan dalam 3 hari, dengan 30 cangkir kopi. Hasilnya: 10/10 *aesthetic*.
+                    </p>
+                    <a href="#" class="text-pink-main hover:text-pink-dark text-sm mt-3 inline-block font-semibold">Lihat Detail →</a>
+                </div>
+
+                <!-- Proyek 2 -->
+                <div class="bg-white p-5 rounded-xl shadow-lg border-4 border-pink-main/70 transform hover:scale-[1.02] transition duration-300">
+                    <div class="bg-pink-soft h-32 rounded-lg mb-4 flex items-center justify-center text-pink-main font-bold text-xl">
+                        [Aplikasi Mini Mockup]
+                    </div>
+                    <h3 class="font-bold text-xl text-text-dark mb-2">Aplikasi Kalkulator Kucing Lucu</h3>
+                    <p class="text-sm">
+                        Sebuah aplikasi mini yang menghitung BMI, tapi hasilnya selalu berupa gambar kucing. Proyek iseng yang viral!
+                    </p>
+                    <a href="#" class="text-pink-main hover:text-pink-dark text-sm mt-3 inline-block font-semibold">Lihat Detail →</a>
+                </div>
+                
+                <!-- Proyek 3 -->
+                <div class="bg-white p-5 rounded-xl shadow-lg border-4 border-pink-main/70 transform hover:scale-[1.02] transition duration-300">
+                    <div class="bg-pink-soft h-32 rounded-lg mb-4 flex items-center justify-center text-pink-main font-bold text-xl">
+                        [Studi Kasus Desain]
+                    </div>
+                    <h3 class="font-bold text-xl text-text-dark mb-2">Redesain UX Paling Pastel Sedunia</h3>
+                    <p class="text-sm">
+                        Studi kasus mendalam tentang bagaimana UX yang terlalu serius bisa disembuhkan dengan palet warna pink. Peningkatan konversi 500%.
+                    </p>
+                    <a href="#" class="text-pink-main hover:text-pink-dark text-sm mt-3 inline-block font-semibold">Lihat Detail →</a>
+                </div>
+                
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#kontak" class="inline-block px-6 py-3 text-base font-bold text-text-dark border-2 border-pink-main rounded-full transition duration-300 hover:bg-pink-soft hover:shadow-md">
+                    Lihat Lebih Banyak Proyek Lagi (Kalau Anda Kuat)
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="kontak" class="text-center py-12 px-6 bg-pink-soft rounded-2xl shadow-xl">
+            <h2 class="font-pacifico text-3xl sm:text-4xl text-pink-main mb-6">
+                Ayo Ngopi (Digital) dan Bikin Proyek Lucu! 💌
+            </h2>
+            <p class="text-lg mb-8 max-w-xl mx-auto">
+                Jangan ragu untuk menyapa saya. Saya siap mendengarkan ide-ide *aesthetic* dan kolaborasi yang penuh pink.
+            </p>
+            
+            <form class="max-w-md mx-auto space-y-4">
+                <input type="text" placeholder="Nama Anda yang Lucu" class="w-full p-3 rounded-lg border-2 border-pink-main focus:ring-4 focus:ring-pink-main/50 focus:border-pink-main bg-white">
+                <input type="email" placeholder="Email Rahasia Anda" class="w-full p-3 rounded-lg border-2 border-pink-main focus:ring-4 focus:ring-pink-main/50 focus:border-pink-main bg-white">
+                <textarea placeholder="Pesan Paling Aesthetic Anda..." rows="4" class="w-full p-3 rounded-lg border-2 border-pink-main focus:ring-4 focus:ring-pink-main/50 focus:border-pink-main bg-white"></textarea>
+                
+                <button type="submit" class="w-full px-6 py-3 text-lg font-bold text-white bg-pink-main rounded-lg shadow-md transition duration-300 hover:bg-pink-dark wiggle">
+                    Kirim Pesan Pink!
+                </button>
+            </form>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-text-dark text-white text-center py-6 mt-12 rounded-t-2xl">
+        <p class="text-sm font-inter">
+            © 2025 utwll. Dibuat dengan ✨ dan banyak sekali warna Pink.
+        </p>
+        <div class="mt-2 text-pink-soft text-lg">
+            <!-- Ikon Media Sosial Palsu -->
+            <a href="#" class="mx-2 hover:text-pink-main transition">
+                <span title="Twitter">🐦</span>
+            </a>
+            <a href="#" class="mx-2 hover:text-pink-main transition">
+                <span title="Instagram">📸</span>
+            </a>
+            <a href="#" class="mx-2 hover:text-pink-main transition">
+                <span title="GitHub">💻</span>
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>
